@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- import JavaScript -->
+  <script defer src="script.js"></script>
+
+  <!-- import CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>PuppyBowl</title>
+</head>
+
+<body>
+  <h1>Puppy Bowl</h1>
+  <!-- form to add new players -->
+  <div id="new-player-form">
+  <!--player (object)
+  name (string): The name of the player.
+  breed (string): The type of dog breed the player is.
+  status (enum): The status of the player, which indicates whether the player is in the field or on the bench. 
+      Status can only be set to one of two valid string values: field or bench. The default value is bench.
+  imageUrl (string): A url pointing to an image of the player.
+  teamId (number): (OPTIONAL for extra credit). This is the identifier for the team to add the player to-->
+  <form>
+      <label>Recipe Name:</label>
+      <input id="playerName" type="text" placeholder="Simba"><br />
+      <label>Breed:</label>
+      <input id="playerBreed" type="text" placeholder="Golden-Doodle"><br />
+      <label>Status:</label>
+      <select id="playerStatus">
+        <option>bench</option>
+        <option>field</option>
+      </select><br />
+      <label>Image URL:</label>
+      <input id="imageUrl" type="text"> <br />
+      <label>Team ID:</label>
+      <input id="playerTeamID" type="number" placeholder="10"><br />
+
+      <button class="add-player">Add Player</button><br/> <br />
+  </form>
+  </div>
+  <main>
+  <!-- container for all players -->
+  <div id="all-players-container">
+    <ul id="playerList"></ul>
+  </div>
+  <div>
+  <dialog id="playerModal"></dialog>
+  </div>
+  </main>
+  
+
+</html>
