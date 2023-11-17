@@ -165,6 +165,12 @@ form.addEventListener("submit", async (event) => {
         form.playerTeamID.value,
        );
     
+        // Clear input fields to reset form
+        form.playerName.value = '';
+        form.playerBreed.value = '';
+        form.playerStatus.value= '';
+        form.imageUrl.value = '';
+        form.playerTeamID.value = '';
     } catch (err) {
         console.error('Uh oh, trouble rendering the new player form!', err);
     }
@@ -175,7 +181,6 @@ const init = async () => {
     renderAllPlayers(players);
    //console.log(players);
     //renderNewPlayerForm();
-    //form();
 }
 
 
